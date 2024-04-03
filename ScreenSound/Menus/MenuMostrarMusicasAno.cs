@@ -18,7 +18,7 @@ internal class MenuMostrarMusicasAno : Menu
         Console.Write("Digite o ano de lançamento das musicas: ");
         string anoMusica = Console.ReadLine()!;
         //Agora passa o select dentro dos parenteses como condição
-        var listaMusicas = musicaDAL.ListarPor(a => a.AnoLancamento == Convert.ToInt32(anoMusica));
+        var listaMusicas = musicaDAL.RecuperarPorNome(a => a.AnoLancamento == Convert.ToInt32(anoMusica));
         if (listaMusicas.Any())
         {
             //esse artistaRecuperado não deixa de ser da classe artista
